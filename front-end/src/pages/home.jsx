@@ -1,5 +1,4 @@
 
-import "../css/index.css";
 import Flutter from "../assets/flutter-1.svg";
 import Dash from "../assets/dash-1.png";
 import { Link } from "react-router-dom";

@@ -222,4 +222,8 @@ body {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+}
+
+.red {
+  color: red;
 }/*# sourceMappingURL=index.css.map */
