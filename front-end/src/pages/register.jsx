@@ -1,16 +1,12 @@
-import Flutter from "../assets/flutter-1.svg";
-import { Form, Link, useActionData } from "react-router-dom";
+import { Form, Link, useActionData , redirect } from "react-router-dom";
 
-export function loader({ request }) {
-  return new URL(request.url).searchParams.get("msg");
-}
+import NavBar from "../Components/NavBar";
 
 export async function action({request}) {
 
 const formData = await request.formData()
 
 const email = formData.get('email');
-console.log(`email is  : ${email}`)
 
 const postData = {
 email : email
@@ -25,12 +21,16 @@ const res = await fetch("http://localhost:3500/register/email", {
   body: JSON.stringify(postData),
 });
 
-const data = await res.json();
+const data =   await res.json();
+
+console.log(data);
+return redirect('/password');
 
 }
 
 
 catch(err) {
+
 return err.message;
 }
 
@@ -43,15 +43,7 @@ export default function Register() {
 
     return (
         <div className="container">
-        <nav className="navbar-1">
-  
-        <span>
-          <img src={Flutter} className="logo" alt="flutter"/> 
-        <div className="score-bar"></div>
-           </span>
-          
-  </nav>
-
+        <NavBar width="2%"/>
   <main className="register-container">
 <div className="register-form">
 <h1>CREATE YOUR ACCOUNT</h1>
