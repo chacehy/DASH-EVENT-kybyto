@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: white;
+}
+
+.navbar-1 {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  background: #FFF;
+  box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+  justify-content: space-between;
+}
+.navbar-1 img {
+  width: 100px;
+}
+.navbar-1 span {
+  display: flex;
+  margin-left: 3rem;
+}
+.navbar-1 span .logo {
+  height: 80px;
+}
+.navbar-1 p {
+  color: #47C5FB;
+  font-family: "Poppins";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  margin-top: 8px;
+}
+.navbar-1 a {
+  color: #0069C2;
+  font-family: "Poppins";
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.event-container {
+  background: #00569E;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+.event-container .event-details {
+  width: 50%;
+  margin-top: 4%;
+  margin-left: 6%;
+}
+.event-container .event-title p {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 67px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 75px; /* 111.94% */
+  letter-spacing: -1.34px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.event-container .event-description p {
+  width: 100%;
+  height: 81px;
+  color: #96ECFF;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+}
+.event-container a {
+  border: none;
+  display: flex;
+  width: 353px;
+  padding: 15px 33px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 104px;
+  background: #FFF;
+  text-decoration: none;
+  margin-top: 33px;
+}
+.event-container a p {
+  color: #0069C2;
+  font-family: "Poppins";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1440px) {
+  /* Your styles for screens under 1440 pixels go here */
+  .logo {
+    width: 50px;
+  }
+  /* Add more styles as needed */
+}
+@media (max-width: 1432px) {
+  body {
+    overflow-y: scroll;
+  }
+}
+@media (max-width: 991px) {
+  .event-title p {
+    font-size: 30px;
+  }
+}
+.register-container {
+  background-color: white;
+  height: 80%;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+}
+.register-container .back-button {
+  display: flex;
+  gap: 10px;
+  margin-top: 3rem;
+  position: absolute;
+  right: 80rem;
+}
+.register-container .back-button svg {
+  position: relative;
+  top: 2px;
+}
+.register-container .register-form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register-container h1 {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.register-container p {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+}
+.register-container a {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.register-container .form-email {
+  margin-top: 4rem;
+}
+.register-container .form-email p {
+  margin-bottom: 12px;
+  color: rgba(0, 0, 0, 0.66);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.register-container .form-email .input {
+  padding: 1rem;
+  font-size: 2rem;
+  width: 596px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #FFF;
+}
+.register-container .form-email button, .register-container .form-email a {
+  color: #FFF;
+  font-family: "Inter";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: capitalize;
+  border: none;
+  margin-top: 2rem;
+  display: flex;
+  width: 596px;
+  border-radius: 80px;
+  background: #00569E;
+  height: 74px;
+  padding: 0px 242px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.red {
+  color: red;
+  font-family: "Poppins";
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.score-bar {
+  width: 781px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: rgba(60, 60, 67, 0.18);
+  align-self: center;
+  margin-left: 40%;
+}
+.score-bar ul {
+  display: flex;
+  list-style: none;
+  gap: 14%;
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+
+.blue-bar {
+  display: flex;
+}
+.blue-bar svg {
+  position: relative;
+  top: -6px;
+  left: -5px;
+}
+
+.aqua-bar {
+  width: 50%;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: #34C8FF;
+}
+
+.container-succed {
+  height: 100vh;
+  width: 100vw;
+  background: #00569E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-succed h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.container-succed img {
+  width: 412px;
+  height: 354px;
+  flex-shrink: 0;
+}
+.container-succed a {
+  border-radius: 104px;
+  background: #FFF;
+  display: flex;
+  width: 490px;
+  padding: 15px 33px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #0069C2;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 3rem;
+}/*# sourceMappingURL=index.css.map */

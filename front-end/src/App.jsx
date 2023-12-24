@@ -13,7 +13,7 @@ import {loader as RegisterLoader} from "./pages/register.jsx"
 import Home from "./pages/home.jsx"
 import Register from "./pages/register.jsx";
 
-import "../../../front-end/src/css/index.css"
+import "./css/index.css"
 import Password from "./pages/password.jsx";
 import Name from "./pages/Name.jsx";
 import Country from "./pages/Country.jsx";
