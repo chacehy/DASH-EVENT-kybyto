@@ -17,7 +17,11 @@ const corsOptions = require('./config/corsOption');
 
 app.use(express.json());
 
-app.use(cors(corsOptions)); 
+app.use(cors()); 
+
+app.get('/',(req,res) => {
+    res.send('Hello World!')
+})
 
 app.post('/register/email', (req, res) => { 
    const {email}  = req.body;
