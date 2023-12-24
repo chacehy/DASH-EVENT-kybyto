@@ -12,7 +12,7 @@ function Home() {
         <img src={Flutter} className="logo" alt="flutter"/> 
          <p>FLUTTER</p>     
          </span>
-        <Link to="/login">LOG IN</Link>
+       
 </nav>
 <section className="event-container">
     <div className="event-details">

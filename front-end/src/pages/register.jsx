@@ -1,12 +1,29 @@
-import { Form, Link, useActionData , redirect } from "react-router-dom";
+import { Form,  useActionData , redirect , useLoaderData} from "react-router-dom";
 
 import NavBar from "../Components/NavBar";
+
+
+export function loader({ request }) {
+  return new URL(request.url).searchParams.get("message")
+}
+
 
 export async function action({request}) {
 
 const formData = await request.formData()
 
 const email = formData.get('email');
+
+if(!email) {
+  return "Please Enter A email";
+}
+
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+if(!emailRegex.test(email)) {
+  return redirect('/register?message=Please Enter A valid email');
+}
+
 
 const postData = {
 email : email
@@ -24,6 +41,17 @@ const res = await fetch("http://localhost:3500/register/email", {
 const data =   await res.json();
 
 console.log(data);
+
+const myUser = {
+  id : data,
+  email: email,
+  password : "",
+  name : "",
+  country : "",
+phone :""
+}
+
+localStorage.setItem('user', JSON.stringify(myUser));
 return redirect('/password');
 
 }
@@ -31,13 +59,13 @@ return redirect('/password');
 
 catch(err) {
 
-return err.message;
+return "This email is already used"
 }
 
 }
 export default function Register() {
 
-  
+  const message = useLoaderData();
   const errorMessage = useActionData();
 
 
@@ -45,12 +73,15 @@ export default function Register() {
         <div className="container">
         <NavBar width="2%"/>
   <main className="register-container">
+    
 <div className="register-form">
 <h1>CREATE YOUR ACCOUNT</h1>
-<p>Already have an account? <Link className="bold">Log in</Link></p>
+
 <div className="form-email">
 
       <p>First, Enter Your Email Adress</p>
+      {message && <h3 className="red">{message}</h3>}
+
       {errorMessage && <h3 className="red">{errorMessage}</h3>}
 
     <Form method="post" 

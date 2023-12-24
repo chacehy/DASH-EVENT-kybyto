@@ -96,30 +96,29 @@ flex-grow: 1;
 
 .event-title p{
     color: #FFF;
-    font-family: 'Poppins';
-    font-size: 400%;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 75px; 
-    letter-spacing: -1.34px;
-    text-transform: uppercase;    
+font-family: Poppins;
+font-size: 67px;
+font-style: normal;
+font-weight: 700;
+line-height: 75px; /* 111.94% */
+letter-spacing: -1.34px;
+text-transform: uppercase;   
   
    
-    margin-bottom: 45px;  
+    margin-bottom: 35px;  
 }
 .event-description p{
     width: 100%;
     
     height: 81px;
-    
     color: #96ECFF;
-    font-family: 'Poppins';
-    font-size: 100%;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.54px;
-    text-transform: uppercase;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.54px;
+text-transform: uppercase;
 }
 a{
    border: none;
@@ -162,17 +161,15 @@ a{
     body {
         overflow-y: scroll;
     }
-    .event-container {
-        flex-direction: column-reverse;
-       padding-bottom: 5rem;
-    }
-  .event-image {
-   position: relative;
-   right: 20rem;
-   
-  }
+    
+ 
 }
 
+@media (max-width : 991px)  {
+    .event-title p  {
+font-size: 30px;
+    }
+}
 
 
 .register-container {
@@ -184,6 +181,18 @@ display: flex;
 margin-top:1rem;
 justify-content: center;
 
+
+.back-button {
+   display: flex;
+   gap: 10px;
+   svg {
+    position: relative;
+    top: 2px;
+   }
+    margin-top: 3rem;
+   position: absolute;
+   right: 80rem;
+}
 .register-form {
     margin-top: 4rem;
     display: flex;
@@ -275,6 +284,9 @@ text-decoration: none;
 
  .red {
     color: red;
+    font-family: 'Poppins';
+    font-size: 15px;
+    margin-top: 5px;
  }
 
  .score-bar {
